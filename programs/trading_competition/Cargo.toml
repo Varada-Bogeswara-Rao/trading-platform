@@ -1,0 +1,34 @@
+[package]
+name = "trading-competition"
+version = "0.1.0"
+description = "Competitive Web3 Trading Platform with Ephemeral Rollups"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "trading_competition"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+# --- Core Anchor and SPL dependencies ---
+anchor-lang = "0.30.1"
+anchor-spl = "0.30.1"
+spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
+mpl-token-metadata = { version = "4.1.2", features = ["no-entrypoint"] }
+
+# --- MagicBlock SDK (delegation / ephemeral rollups) ---
+# Using main branch instead of missing tag
+magicblock-sdk = { git = "https://github.com/magicblock-labs/delegation-program.git", branch = "main", features = ["ephemeral-rollups"] }
+
+# --- Pyth Lazer SDK for price feeds ---
+pyth-lazer-sdk = { git = "https://github.com/pythnetwork/pyth-client-rs.git", features = ["cpi"] }
+
+# --- Optional fix if you face Git fetch issues ---
+# [net]
+# git-fetch-with-cli = true
