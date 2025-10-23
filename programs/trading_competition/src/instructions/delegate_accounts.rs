@@ -1,90 +1,84 @@
 use anchor_lang::prelude::*;
-use crate::competition::{Competition, CompetitionError};
-use anchor_lang::solana_program::sysvar::rent::Rent;
-use magicblock_sdk::{DelegateAccount, delegation_program}; // Import the delegation_program module
+use crate::competition::*;
+use anchor_spl::token::{Token, TokenAccount};
+
+use ephemeral_rollups_sdk::cpi::*;
+use ephemeral_rollups_sdk::consts::DELEGATION_PROGRAM_ID;
+// use ephemeral_rollups_sdk::delegate_args::*;
 
 #[derive(Accounts)]
 pub struct DelegateAccounts<'info> {
-    #[account(mut, has_one = authority)]
+    #[account(
+        mut,
+        has_one = authority,
+        has_one = er_instance,
+        constraint = competition.phase == CompetitionPhase::Upcoming @ CompetitionError::NotActive
+    )]
     pub competition: Account<'info, Competition>,
+
     #[account(mut)]
     pub user: Signer<'info>,
-    // --- The Position PDA will be delegated to the ER ---
+
+    #[account(
+        mut,
+        token::mint = competition.usdc_mint,
+        token::authority = user
+    )]
+    pub user_usdc_ata: Account<'info, TokenAccount>,
+
     #[account(
         init,
         payer = user,
-        // The space calculation for Position needs to be accurate
-        space = 8 + 32 + 8 + 8 + 8 + 8, // Discriminator + Pubkey + 4x u64/i64 = 8 + 64 bytes
+        space = 8 + 32*3 + 16*3 + 1,
         seeds = [b"position", competition.key().as_ref(), user.key().as_ref()],
         bump
     )]
-    pub position: Account<'info, crate::competition::Position>,
-    // --- MagicBlock CPI Accounts ---
-    /// CHECK: MagicBlock Delegation Program account
-    #[account(address = delegation_program::ID)]
+    pub position: Account<'info, Position>,
+
+    /// CHECK: MagicBlock delegation program
+    #[account(address = DELEGATION_PROGRAM_ID)]
     pub delegation_program: UncheckedAccount<'info>,
-    /// CHECK: This is the specific Ephemeral Rollup instance address provided by the user (or client)
-    pub er_instance: UncheckedAccount<'info>, 
-    // ---------------------------------
+
+    /// CHECK: Must equal competition.er_instance
+    #[account(address = competition.er_instance)]
+    pub er_instance: UncheckedAccount<'info>,
+
     pub system_program: Program<'info, System>,
+    pub token_program: Program<'info, Token>,
     pub rent: Sysvar<'info, Rent>,
 }
 
-pub fn handler(
-    ctx: Context<DelegateAccounts>,
-    er_instance: Pubkey,
-) -> Result<()> {
-    let competition = &mut ctx.accounts.competition;
-    require!(competition.is_active, CompetitionError::NotActive);
+pub fn handler(ctx: Context<DelegateAccounts>, _er_instance: Pubkey) -> Result<()> {
+    let comp = &ctx.accounts.competition;
+    let pos = &mut ctx.accounts.position;
 
-    let user_key = ctx.accounts.user.key();
-    
-    // 1. Initialize user position (L1 transaction)
-    let position = &mut ctx.accounts.position;
-    position.user = user_key;
-    position.usdc_balance = 1000_000_000; // Initial synthetic capital
-    position.initial_value = 1000_000_000;
-    position.current_value = 1000_000_000;
-    position.profit = 0;
+    // initialise synthetic balance (demo: 1 M USDC)
+    pos.competition = comp.key();
+    pos.user = ctx.accounts.user.key();
+    pos.usdc_ata = ctx.accounts.user_usdc_ata.key();
+    pos.usdc_balance = 1_000_000_000_000u128; // 1 M * 10^6
+    pos.initial_value = pos.usdc_balance;
+    pos.current_value = pos.usdc_balance;
+    pos.bump = ctx.bumps.position;
 
-    // Add user to competition (if not already there)
-    // NOTE: This logic needs protection against the competition account hitting max size.
-    // For the hackathon, we assume a small number of users.
-    if !competition.users.contains(&user_key) {
-        competition.users.push(user_key);
-    }
-    
-    // 2. Delegate the Position account to the ER (L1 transaction with CPI)
-    let cpi_program = ctx.accounts.delegation_program.to_account_info();
-    
-    // We need the signer seeds for the Position PDA since it's being delegated by the Competition Program
-    let position_seeds = &[
-        b"position",
-        competition.to_account_info().key.as_ref(),
-        user_key.as_ref(),
-        &[ctx.bumps.get("position").unwrap()],
-    ];
-
-    let delegate_instruction = DelegateAccount {
-        // Accounts to be delegated. Only the Position PDA needs high-speed writes.
+    // CPI to delegate
+    let cpi_prog = ctx.accounts.delegation_program.to_account_info();
+    let cpi_accounts = DelegateAccount {
         accounts_to_delegate: vec![
             ctx.accounts.position.to_account_info(),
+            ctx.accounts.user_usdc_ata.to_account_info(),
         ],
-        er_instance,
-        payer: ctx.accounts.user.to_account_info().key(),
+        er_instance: ctx.accounts.er_instance.to_account_info(),
+        payer: ctx.accounts.user.to_account_info(),
+    };
+    let data = DelegateInstructionData {
+        er_instance: comp.er_instance,
+        payer: ctx.accounts.user.key(),
+        accounts_to_delegate: vec![pos.key(), ctx.accounts.user_usdc_ata.key()],
     };
 
-    // Use the delegation program's CPI function
-    magicblock_sdk::cpi::delegate_account(
-        CpiContext::new_with_signer(
-            cpi_program,
-            delegate_instruction.to_account_metas(None),
-            &[position_seeds],
-        ),
-        delegate_instruction,
-    )?;
+    delegate_account(CpiContext::new(cpi_prog, cpi_accounts), data)?;
 
-    msg!("User {} position delegated to ER instance {}", user_key, er_instance);
-
+    msg!("User {} delegated to ER {}", ctx.accounts.user.key(), comp.er_instance);
     Ok(())
 }

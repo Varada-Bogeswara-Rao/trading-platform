@@ -1,51 +1,66 @@
 use anchor_lang::prelude::*;
-use crate::competition::{Competition, CompetitionError};
-use anchor_lang::solana_program::sysvar::rent::Rent;
+
+use crate::competition::*;
 
 #[derive(Accounts)]
-#[instruction(duration: i64)]
 pub struct InitCompetition<'info> {
     #[account(
         init,
-        // WARNING: Using large, manually calculated space like this for Vec<T> is HIGHLY inefficient and risky in Anchor.
-        // For a hackathon, we set a large, fixed cap to avoid runtime errors, but ideally use separate PDAs or zero-copy.
-        // We calculate a max theoretical size for up to 100 users/positions for now:
-        // Discriminator (8) + Pubkey (32) + Pubkey (32) + i64 (8) + i64 (8) + Vec<Pubkey> (4 + 32*100) + Vec<Position> (4 + (8+32+8+8+8+8)*100) + bool (1)
-        // Simplified large size allocation to prevent initial failure:
-        space = 8 + 16384, // Approx 16KB space (enough for a few positions, but limits future scale)
         payer = authority,
+        space = 8 + Competition::INIT_SPACE,
         seeds = [b"competition", authority.key().as_ref()],
         bump
     )]
     pub competition: Account<'info, Competition>,
+
+    #[account(
+        init,
+        payer = authority,
+        space = 8 + MockPriceAccount::INIT_SPACE,
+        seeds = [b"mock_price", competition.key().as_ref()],
+        bump,
+    )]
+    pub mock_price: Account<'info, MockPriceAccount>,
+
     #[account(mut)]
     pub authority: Signer<'info>,
+
+    pub usdc_mint: Account<'info, anchor_spl::token::Mint>,
+
+    /// CHECK: Verified in handler
+    pub er_instance: UncheckedAccount<'info>,
+
     pub system_program: Program<'info, System>,
     pub rent: Sysvar<'info, Rent>,
-    // Clock is automatically available in Context for handler logic, but not needed in Accounts struct here.
 }
-
 pub fn handler(
     ctx: Context<InitCompetition>,
     duration: i64,
     usdc_mint: Pubkey,
+    er_instance: Pubkey,
 ) -> Result<()> {
-    // Clock is accessed via anchor_lang::prelude::Clock
     let competition = &mut ctx.accounts.competition;
+    let clock = Clock::get()?;
+
+    // Immutable borrow first
+    let mock_price_key = ctx.accounts.mock_price.key();
+    let mock_price = &mut ctx.accounts.mock_price;
+
     competition.authority = ctx.accounts.authority.key();
     competition.usdc_mint = usdc_mint;
-    
-    // NOTE: The current competition model sets the start_time on initialization (L1).
-    // This transaction must happen *before* the ER session starts.
-    competition.start_time = Clock::get()?.unix_timestamp;
-    
-    competition.duration = duration;
-    competition.users = Vec::new();
-    competition.leaderboard = Vec::new();
-    competition.is_active = true;
-    
-    msg!("Competition {} initialized by {}", competition.key(), competition.authority);
-    msg!("Starts now: {} for {} seconds", competition.start_time, duration);
-    
+    competition.er_instance = er_instance;
+    competition.mock_price_pda = mock_price_key;
+    competition.phase = CompetitionPhase::Active;
+    competition.start_time = clock.unix_timestamp;
+    competition.end_time = competition.start_time + duration;
+    competition.challenge_deadline = competition.end_time + 3600;
+    competition.winner = Pubkey::default();
+    competition.winner_profit = 0;
+    competition.state_root = [0u8; 32];
+    competition.bump = ctx.bumps.competition;
+
+    // Mutable borrow: update price
+    mock_price.update_price(150_000_000u128, -8i32, &clock)?;
+
     Ok(())
 }

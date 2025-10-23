@@ -1,0 +1,1354 @@
+anchor-attribute-access-control v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1
+    ├── pyth-solana-receiver-sdk v1.0.1
+    │   └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+    └── pythnet-sdk v2.3.1
+        └── pyth-solana-receiver-sdk v1.0.1 (*)
+
+anchor-attribute-access-control v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1
+    ├── anchor-spl v0.32.1
+    │   ├── ephemeral-rollups-sdk v0.2.5 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk)
+    │   │   └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+    │   └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+    ├── ephemeral-rollups-sdk v0.2.5 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk) (*)
+    └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+
+anchor-attribute-account v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-attribute-account v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-attribute-constant v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-attribute-constant v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-attribute-error v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-attribute-error v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-attribute-event v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-attribute-event v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-attribute-program v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-attribute-program v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-derive-accounts v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-derive-accounts v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-derive-serde v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-derive-serde v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-derive-space v0.31.1 (proc-macro)
+└── anchor-lang v0.31.1 (*)
+
+anchor-derive-space v0.32.1 (proc-macro)
+└── anchor-lang v0.32.1 (*)
+
+anchor-lang v0.31.1 (*)
+
+anchor-lang v0.32.1 (*)
+
+anchor-syn v0.31.1
+├── anchor-attribute-access-control v0.31.1 (proc-macro) (*)
+├── anchor-attribute-account v0.31.1 (proc-macro) (*)
+├── anchor-attribute-constant v0.31.1 (proc-macro) (*)
+├── anchor-attribute-error v0.31.1 (proc-macro) (*)
+├── anchor-attribute-event v0.31.1 (proc-macro) (*)
+├── anchor-attribute-program v0.31.1 (proc-macro) (*)
+├── anchor-derive-accounts v0.31.1 (proc-macro) (*)
+└── anchor-derive-serde v0.31.1 (proc-macro) (*)
+
+anchor-syn v0.32.1
+├── anchor-attribute-access-control v0.32.1 (proc-macro) (*)
+├── anchor-attribute-account v0.32.1 (proc-macro) (*)
+├── anchor-attribute-constant v0.32.1 (proc-macro) (*)
+├── anchor-attribute-error v0.32.1 (proc-macro) (*)
+├── anchor-attribute-event v0.32.1 (proc-macro) (*)
+├── anchor-attribute-program v0.32.1 (proc-macro) (*)
+├── anchor-derive-accounts v0.32.1 (proc-macro) (*)
+└── anchor-derive-serde v0.32.1 (proc-macro) (*)
+
+base64 v0.12.3
+└── libsecp256k1 v0.6.0
+    └── solana-secp256k1-recover v2.2.1
+        └── solana-program v2.3.0
+            ├── anchor-lang v0.31.1 (*)
+            ├── mpl-token-metadata v5.1.1
+            │   └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+            ├── spl-associated-token-account v7.0.0
+            │   └── anchor-spl v0.32.1 (*)
+            └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+
+base64 v0.21.7
+├── anchor-lang v0.31.1 (*)
+└── anchor-lang v0.32.1 (*)
+
+base64 v0.22.1
+├── solana-sysvar v2.3.0
+│   ├── anchor-lang v0.32.1 (*)
+│   ├── solana-program v2.3.0 (*)
+│   ├── spl-elgamal-registry v0.2.0
+│   │   └── spl-token-2022 v8.0.1
+│   │       ├── anchor-spl v0.32.1 (*)
+│   │       └── spl-associated-token-account v7.0.0 (*)
+│   ├── spl-token v8.0.0
+│   │   ├── anchor-spl v0.32.1 (*)
+│   │   ├── spl-associated-token-account v7.0.0 (*)
+│   │   └── spl-token-2022 v8.0.1 (*)
+│   └── spl-token-2022 v8.0.1 (*)
+├── solana-sysvar v3.0.0
+│   └── solana-program v3.0.0
+│       └── pythnet-sdk v2.3.1 (*)
+├── solana-zk-sdk v2.3.13
+│   ├── spl-elgamal-registry v0.2.0 (*)
+│   ├── spl-pod v0.5.1
+│   │   ├── anchor-spl v0.32.1 (*)
+│   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   ├── spl-tlv-account-resolution v0.10.0
+│   │   │   └── spl-transfer-hook-interface v0.10.0
+│   │   │       └── spl-token-2022 v8.0.1 (*)
+│   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   ├── spl-token-confidential-transfer-proof-extraction v0.3.0
+│   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   ├── spl-token-group-interface v0.6.0
+│   │   │   ├── anchor-spl v0.32.1 (*)
+│   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   ├── spl-token-metadata-interface v0.7.0
+│   │   │   ├── anchor-spl v0.32.1 (*)
+│   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   ├── spl-transfer-hook-interface v0.10.0 (*)
+│   │   └── spl-type-length-value v0.8.0
+│   │       ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │       ├── spl-token-2022 v8.0.1 (*)
+│   │       ├── spl-token-metadata-interface v0.7.0 (*)
+│   │       └── spl-transfer-hook-interface v0.10.0 (*)
+│   ├── spl-token-2022 v8.0.1 (*)
+│   ├── spl-token-confidential-transfer-ciphertext-arithmetic v0.3.1
+│   │   └── spl-token-2022 v8.0.1 (*)
+│   ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   └── spl-token-confidential-transfer-proof-generation v0.4.1
+│       └── spl-token-2022 v8.0.1 (*)
+└── spl-token-confidential-transfer-ciphertext-arithmetic v0.3.1 (*)
+
+block-buffer v0.9.0
+└── sha2 v0.9.9
+    └── libsecp256k1 v0.6.0 (*)
+
+block-buffer v0.10.4
+├── digest v0.10.7
+│   ├── blake3 v1.8.2
+│   │   ├── solana-blake3-hasher v2.2.1
+│   │   │   └── solana-program v2.3.0 (*)
+│   │   ├── solana-blake3-hasher v3.0.0
+│   │   │   └── solana-program v3.0.0 (*)
+│   │   ├── solana-message v2.4.0
+│   │   │   ├── solana-example-mocks v2.2.1
+│   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   └── solana-program v2.3.0 (*)
+│   │   └── solana-program v2.3.0 (*)
+│   ├── curve25519-dalek v4.1.3
+│   │   ├── solana-address v1.0.0
+│   │   │   ├── solana-message v3.0.1
+│   │   │   │   └── solana-example-mocks v3.0.0
+│   │   │   │       └── solana-program v3.0.0 (*)
+│   │   │   └── solana-pubkey v3.0.0
+│   │   │       ├── solana-account-info v3.0.0
+│   │   │       │   ├── solana-cpi v3.0.0
+│   │   │       │   │   └── solana-program v3.0.0 (*)
+│   │   │       │   ├── solana-instructions-sysvar v3.0.0
+│   │   │       │   │   └── solana-program v3.0.0 (*)
+│   │   │       │   ├── solana-program v3.0.0 (*)
+│   │   │       │   ├── solana-program-entrypoint v3.1.0
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   └── solana-sysvar v3.0.0 (*)
+│   │   │       ├── solana-address-lookup-table-interface v3.0.0
+│   │   │       │   └── solana-example-mocks v3.0.0 (*)
+│   │   │       ├── solana-cpi v3.0.0 (*)
+│   │   │       ├── solana-epoch-stake v3.0.0
+│   │   │       │   └── solana-program v3.0.0 (*)
+│   │   │       ├── solana-example-mocks v3.0.0 (*)
+│   │   │       ├── solana-instruction v3.0.0
+│   │   │       │   ├── solana-cpi v3.0.0 (*)
+│   │   │       │   ├── solana-example-mocks v3.0.0 (*)
+│   │   │       │   ├── solana-instructions-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-message v3.0.1 (*)
+│   │   │       │   ├── solana-program v3.0.0 (*)
+│   │   │       │   ├── solana-stable-layout v3.0.0
+│   │   │       │   │   └── solana-program v3.0.0 (*)
+│   │   │       │   └── solana-sysvar v3.0.0 (*)
+│   │   │       ├── solana-instructions-sysvar v3.0.0 (*)
+│   │   │       ├── solana-nonce v3.0.0
+│   │   │       │   └── solana-example-mocks v3.0.0 (*)
+│   │   │       ├── solana-program v3.0.0 (*)
+│   │   │       ├── solana-program-entrypoint v3.1.0 (*)
+│   │   │       ├── solana-sdk-ids v3.0.0
+│   │   │       │   ├── solana-address-lookup-table-interface v3.0.0 (*)
+│   │   │       │   ├── solana-clock v3.0.0
+│   │   │       │   │   ├── solana-address-lookup-table-interface v3.0.0 (*)
+│   │   │       │   │   ├── solana-example-mocks v3.0.0 (*)
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-epoch-rewards v3.0.0
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-epoch-schedule v3.0.0
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-example-mocks v3.0.0 (*)
+│   │   │       │   ├── solana-instructions-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-last-restart-slot v3.0.0
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-message v3.0.1 (*)
+│   │   │       │   ├── solana-program v3.0.0 (*)
+│   │   │       │   ├── solana-rent v3.0.0
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-slot-hashes v3.0.0
+│   │   │       │   │   ├── solana-address-lookup-table-interface v3.0.0 (*)
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-slot-history v3.0.0
+│   │   │       │   │   ├── solana-program v3.0.0 (*)
+│   │   │       │   │   └── solana-sysvar v3.0.0 (*)
+│   │   │       │   ├── solana-sysvar v3.0.0 (*)
+│   │   │       │   └── solana-sysvar-id v3.0.0
+│   │   │       │       ├── solana-clock v3.0.0 (*)
+│   │   │       │       ├── solana-epoch-rewards v3.0.0 (*)
+│   │   │       │       ├── solana-epoch-schedule v3.0.0 (*)
+│   │   │       │       ├── solana-instructions-sysvar v3.0.0 (*)
+│   │   │       │       ├── solana-last-restart-slot v3.0.0 (*)
+│   │   │       │       ├── solana-program v3.0.0 (*)
+│   │   │       │       ├── solana-rent v3.0.0 (*)
+│   │   │       │       ├── solana-slot-hashes v3.0.0 (*)
+│   │   │       │       ├── solana-slot-history v3.0.0 (*)
+│   │   │       │       └── solana-sysvar v3.0.0 (*)
+│   │   │       ├── solana-serialize-utils v3.1.0
+│   │   │       │   ├── solana-instructions-sysvar v3.0.0 (*)
+│   │   │       │   └── solana-program v3.0.0 (*)
+│   │   │       ├── solana-stable-layout v3.0.0 (*)
+│   │   │       ├── solana-system-interface v2.0.0
+│   │   │       │   └── solana-example-mocks v3.0.0 (*)
+│   │   │       ├── solana-sysvar v3.0.0 (*)
+│   │   │       └── solana-sysvar-id v3.0.0 (*)
+│   │   ├── solana-curve25519 v2.3.13
+│   │   │   ├── spl-token-confidential-transfer-ciphertext-arithmetic v0.3.1 (*)
+│   │   │   └── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   ├── solana-pubkey v2.4.0
+│   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   ├── solana-account v2.2.1
+│   │   │   │   └── solana-feature-gate-interface v2.2.2
+│   │   │   │       ├── anchor-lang v0.32.1 (*)
+│   │   │   │       └── solana-program v2.3.0 (*)
+│   │   │   ├── solana-account-info v2.3.0
+│   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   ├── solana-account v2.2.1 (*)
+│   │   │   │   ├── solana-cpi v2.2.1
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-stake-interface v1.2.1
+│   │   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   │   │   └── spl-transfer-hook-interface v0.10.0 (*)
+│   │   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   │   ├── solana-instructions-sysvar v2.2.2
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   │   └── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   │   │   ├── solana-invoke v0.4.0
+│   │   │   │   │   └── anchor-lang v0.32.1 (*)
+│   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-program-entrypoint v2.3.0
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-invoke v0.4.0 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   │   ├── spl-memo v6.0.0
+│   │   │   │   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   │   │   └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+│   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   ├── spl-memo v6.0.0 (*)
+│   │   │   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   │   ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   │   │   ├── spl-transfer-hook-interface v0.10.0 (*)
+│   │   │   │   ├── spl-type-length-value v0.8.0 (*)
+│   │   │   │   └── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+│   │   │   ├── solana-address-lookup-table-interface v2.2.2
+│   │   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   ├── solana-cpi v2.2.1 (*)
+│   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   ├── solana-instruction v2.3.0
+│   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   ├── solana-account v2.2.1 (*)
+│   │   │   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   │   │   ├── solana-bincode v2.2.1
+│   │   │   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-cpi v2.2.1 (*)
+│   │   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   │   ├── solana-instructions-sysvar v2.2.2 (*)
+│   │   │   │   ├── solana-invoke v0.4.0 (*)
+│   │   │   │   ├── solana-loader-v2-interface v2.2.1
+│   │   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-loader-v3-interface v3.0.0
+│   │   │   │   │   └── anchor-lang v0.32.1 (*)
+│   │   │   │   ├── solana-loader-v3-interface v5.0.0
+│   │   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-loader-v4-interface v2.2.1
+│   │   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-program-error v2.2.2
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-account-info v2.3.0 (*)
+│   │   │   │   │   ├── solana-cpi v2.2.1 (*)
+│   │   │   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   │   │   ├── solana-instructions-sysvar v2.2.2 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-program-entrypoint v2.3.0 (*)
+│   │   │   │   │   ├── solana-program-pack v2.2.1
+│   │   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   │   │   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   │   ├── spl-discriminator v0.4.1
+│   │   │   │   │   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   │   │   │   │   ├── spl-token-group-interface v0.6.0 (*)
+│   │   │   │   │   │   ├── spl-token-metadata-interface v0.7.0 (*)
+│   │   │   │   │   │   ├── spl-transfer-hook-interface v0.10.0 (*)
+│   │   │   │   │   │   └── spl-type-length-value v0.8.0 (*)
+│   │   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   │   ├── spl-memo v6.0.0 (*)
+│   │   │   │   │   ├── spl-pod v0.5.1 (*)
+│   │   │   │   │   ├── spl-program-error v0.7.0
+│   │   │   │   │   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   │   │   │   │   └── spl-transfer-hook-interface v0.10.0 (*)
+│   │   │   │   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   │   │   ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   │   │   │   ├── spl-token-group-interface v0.6.0 (*)
+│   │   │   │   │   ├── spl-token-metadata-interface v0.7.0 (*)
+│   │   │   │   │   ├── spl-transfer-hook-interface v0.10.0 (*)
+│   │   │   │   │   └── spl-type-length-value v0.8.0 (*)
+│   │   │   │   ├── solana-serialize-utils v2.2.1
+│   │   │   │   │   ├── solana-instructions-sysvar v2.2.2 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   └── solana-vote-interface v2.2.6
+│   │   │   │   │       └── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-stable-layout v2.2.1
+│   │   │   │   │   ├── solana-invoke v0.4.0 (*)
+│   │   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   │   │   ├── solana-system-interface v1.0.0
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   │   │   ├── solana-loader-v3-interface v3.0.0 (*)
+│   │   │   │   │   ├── solana-loader-v3-interface v5.0.0 (*)
+│   │   │   │   │   ├── solana-loader-v4-interface v2.2.1 (*)
+│   │   │   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   │   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-transaction-error v2.2.1
+│   │   │   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   │   │   └── solana-signer v2.2.1
+│   │   │   │   │       └── solana-zk-sdk v2.3.13 (*)
+│   │   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   │   ├── solana-zk-sdk v2.3.13 (*)
+│   │   │   │   ├── spl-associated-token-account-client v2.0.0
+│   │   │   │   │   └── spl-associated-token-account v7.0.0 (*)
+│   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   ├── spl-memo v6.0.0 (*)
+│   │   │   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   │   ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   │   │   ├── spl-token-group-interface v0.6.0 (*)
+│   │   │   │   ├── spl-token-metadata-interface v0.7.0 (*)
+│   │   │   │   └── spl-transfer-hook-interface v0.10.0 (*)
+│   │   │   ├── solana-instructions-sysvar v2.2.2 (*)
+│   │   │   ├── solana-loader-v2-interface v2.2.1 (*)
+│   │   │   ├── solana-loader-v3-interface v3.0.0 (*)
+│   │   │   ├── solana-loader-v3-interface v5.0.0 (*)
+│   │   │   ├── solana-loader-v4-interface v2.2.1 (*)
+│   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   ├── solana-nonce v2.2.1
+│   │   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   │   └── solana-program v2.3.0 (*)
+│   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   ├── solana-program-entrypoint v2.3.0 (*)
+│   │   │   ├── solana-program-error v2.2.2 (*)
+│   │   │   ├── solana-sdk-ids v2.2.1
+│   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   ├── solana-account v2.2.1 (*)
+│   │   │   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   │   │   ├── solana-clock v2.2.2
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-account v2.2.1 (*)
+│   │   │   │   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   │   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   │   │   ├── solana-epoch-rewards v2.2.1
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-epoch-schedule v2.2.1
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   │   ├── solana-instructions-sysvar v2.2.2 (*)
+│   │   │   │   ├── solana-last-restart-slot v2.2.1
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-loader-v2-interface v2.2.1 (*)
+│   │   │   │   ├── solana-loader-v3-interface v3.0.0 (*)
+│   │   │   │   ├── solana-loader-v3-interface v5.0.0 (*)
+│   │   │   │   ├── solana-loader-v4-interface v2.2.1 (*)
+│   │   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   ├── solana-rent v2.2.1
+│   │   │   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   │   └── spl-token-2022 v8.0.1 (*)
+│   │   │   │   ├── solana-slot-hashes v2.2.1
+│   │   │   │   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-slot-history v2.2.1
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-sysvar-id v2.2.1
+│   │   │   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   │   │   ├── solana-clock v2.2.2 (*)
+│   │   │   │   │   ├── solana-epoch-rewards v2.2.1 (*)
+│   │   │   │   │   ├── solana-epoch-schedule v2.2.1 (*)
+│   │   │   │   │   ├── solana-instructions-sysvar v2.2.2 (*)
+│   │   │   │   │   ├── solana-last-restart-slot v2.2.1 (*)
+│   │   │   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   │   │   ├── solana-rent v2.2.1 (*)
+│   │   │   │   │   ├── solana-slot-hashes v2.2.1 (*)
+│   │   │   │   │   ├── solana-slot-history v2.2.1 (*)
+│   │   │   │   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   │   │   │   └── solana-sysvar v2.3.0 (*)
+│   │   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   │   ├── solana-zk-sdk v2.3.13 (*)
+│   │   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   │   └── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   │   ├── solana-serialize-utils v2.2.1 (*)
+│   │   │   ├── solana-signer v2.2.1 (*)
+│   │   │   ├── solana-stable-layout v2.2.1 (*)
+│   │   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   │   ├── solana-system-interface v1.0.0 (*)
+│   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   ├── solana-sysvar-id v2.2.1 (*)
+│   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   ├── solana-zk-sdk v2.3.13 (*)
+│   │   │   ├── spl-associated-token-account-client v2.0.0 (*)
+│   │   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   │   ├── spl-memo v6.0.0 (*)
+│   │   │   ├── spl-pod v0.5.1 (*)
+│   │   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   │   ├── spl-token v8.0.0 (*)
+│   │   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   │   ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   │   ├── spl-token-group-interface v0.6.0 (*)
+│   │   │   ├── spl-token-metadata-interface v0.7.0 (*)
+│   │   │   └── spl-transfer-hook-interface v0.10.0 (*)
+│   │   ├── solana-zk-sdk v2.3.13 (*)
+│   │   └── spl-token-confidential-transfer-proof-generation v0.4.1 (*)
+│   ├── ecdsa v0.16.9
+│   │   └── k256 v0.13.4
+│   │       └── solana-secp256k1-recover v3.0.0
+│   │           └── solana-program v3.0.0 (*)
+│   ├── elliptic-curve v0.13.8
+│   │   ├── ecdsa v0.16.9 (*)
+│   │   └── k256 v0.13.4 (*)
+│   ├── hmac v0.12.1
+│   │   ├── rfc6979 v0.4.0
+│   │   │   └── ecdsa v0.16.9 (*)
+│   │   └── solana-seed-phrase v2.2.1
+│   │       └── solana-zk-sdk v2.3.13 (*)
+│   ├── pbkdf2 v0.11.0
+│   │   └── solana-seed-phrase v2.2.1 (*)
+│   ├── sha3 v0.10.8
+│   │   ├── pythnet-sdk v2.3.1 (*)
+│   │   ├── solana-keccak-hasher v2.2.1
+│   │   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   │   └── solana-program v2.3.0 (*)
+│   │   ├── solana-keccak-hasher v3.0.0
+│   │   │   ├── solana-example-mocks v3.0.0 (*)
+│   │   │   └── solana-program v3.0.0 (*)
+│   │   └── solana-zk-sdk v2.3.13 (*)
+│   └── signature v2.2.0
+│       ├── ecdsa v0.16.9 (*)
+│       └── k256 v0.13.4 (*)
+└── digest v0.10.7
+    └── sha2 v0.10.9
+        ├── anchor-lang-idl v0.1.2
+        │   ├── anchor-attribute-program v0.31.1 (proc-macro) (*)
+        │   └── anchor-attribute-program v0.32.1 (proc-macro) (*)
+        ├── anchor-syn v0.31.1 (*)
+        ├── anchor-syn v0.32.1 (*)
+        ├── k256 v0.13.4 (*)
+        ├── solana-seed-phrase v2.2.1 (*)
+        ├── solana-sha256-hasher v2.3.0
+        │   ├── solana-nonce v2.2.1 (*)
+        │   ├── solana-program v2.3.0 (*)
+        │   ├── solana-pubkey v2.4.0 (*)
+        │   └── spl-discriminator v0.4.1 (*)
+        ├── solana-sha256-hasher v3.0.0
+        │   ├── solana-address v1.0.0 (*)
+        │   ├── solana-nonce v3.0.0 (*)
+        │   └── solana-program v3.0.0 (*)
+        ├── spl-discriminator-syn v0.2.1
+        │   └── spl-discriminator-derive v0.2.0 (proc-macro)
+        │       └── spl-discriminator v0.4.1 (*)
+        └── spl-program-error-derive v0.5.0 (proc-macro)
+            └── spl-program-error v0.7.0 (*)
+
+borsh v0.10.3
+├── anchor-lang v0.31.1 (*)
+├── anchor-lang v0.32.1 (*)
+├── ephemeral-rollups-sdk v0.2.5 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk) (*)
+├── mpl-token-metadata v5.1.1 (*)
+├── pythnet-sdk v2.3.1 (*)
+├── solana-borsh v2.2.1
+│   ├── solana-program v2.3.0 (*)
+│   └── spl-token-metadata-interface v0.7.0 (*)
+├── solana-program v2.3.0 (*)
+├── solana-pubkey v2.4.0 (*)
+├── solana-stake-interface v1.2.1 (*)
+└── trading_competition v0.1.0 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/programs/trading_competition)
+
+borsh v1.5.7
+├── solana-address v1.0.0 (*)
+├── solana-borsh v2.2.1 (*)
+├── solana-borsh v3.0.0
+│   └── solana-program v3.0.0 (*)
+├── solana-hash v2.3.0
+│   ├── solana-blake3-hasher v2.2.1 (*)
+│   ├── solana-epoch-rewards v2.2.1 (*)
+│   ├── solana-example-mocks v2.2.1 (*)
+│   ├── solana-keccak-hasher v2.2.1 (*)
+│   ├── solana-message v2.4.0 (*)
+│   ├── solana-nonce v2.2.1 (*)
+│   ├── solana-program v2.3.0 (*)
+│   ├── solana-sha256-hasher v2.3.0 (*)
+│   ├── solana-slot-hashes v2.2.1 (*)
+│   ├── solana-sysvar v2.3.0 (*)
+│   └── solana-vote-interface v2.2.6 (*)
+├── solana-hash v3.0.0
+│   ├── solana-blake3-hasher v3.0.0 (*)
+│   ├── solana-epoch-rewards v3.0.0 (*)
+│   ├── solana-example-mocks v3.0.0 (*)
+│   ├── solana-keccak-hasher v3.0.0 (*)
+│   ├── solana-message v3.0.1 (*)
+│   ├── solana-nonce v3.0.0 (*)
+│   ├── solana-program v3.0.0 (*)
+│   ├── solana-sha256-hasher v3.0.0 (*)
+│   ├── solana-slot-hashes v3.0.0 (*)
+│   └── solana-sysvar v3.0.0 (*)
+├── solana-instruction v2.3.0 (*)
+├── solana-instruction v3.0.0 (*)
+├── solana-program v2.3.0 (*)
+├── solana-program-error v2.2.2 (*)
+├── solana-program-error v3.0.0
+│   ├── solana-account-info v3.0.0 (*)
+│   ├── solana-address v1.0.0 (*)
+│   ├── solana-cpi v3.0.0 (*)
+│   ├── solana-instruction-error v2.0.0
+│   │   ├── solana-instruction v3.0.0 (*)
+│   │   ├── solana-instructions-sysvar v3.0.0 (*)
+│   │   ├── solana-program v3.0.0 (*)
+│   │   ├── solana-serialize-utils v3.1.0 (*)
+│   │   └── solana-transaction-error v3.0.0
+│   │       └── solana-message v3.0.1 (*)
+│   ├── solana-instructions-sysvar v3.0.0 (*)
+│   ├── solana-program v3.0.0 (*)
+│   ├── solana-program-entrypoint v3.1.0 (*)
+│   ├── solana-program-pack v3.0.0
+│   │   └── solana-program v3.0.0 (*)
+│   ├── solana-system-interface v2.0.0 (*)
+│   └── solana-sysvar v3.0.0 (*)
+├── solana-pubkey v2.4.0 (*)
+├── solana-stake-interface v1.2.1 (*)
+├── spl-associated-token-account v7.0.0 (*)
+├── spl-pod v0.5.1 (*)
+└── spl-token-metadata-interface v0.7.0 (*)
+
+borsh-derive v0.10.3 (proc-macro)
+└── borsh v0.10.3 (*)
+
+borsh-derive v1.5.7 (proc-macro)
+└── borsh v1.5.7 (*)
+
+bs58 v0.5.1
+└── solana-program v2.3.0 (*)
+
+bs58 v0.5.1
+├── anchor-attribute-account v0.31.1 (proc-macro) (*)
+├── anchor-attribute-account v0.32.1 (proc-macro) (*)
+├── anchor-attribute-program v0.31.1 (proc-macro) (*)
+├── anchor-attribute-program v0.32.1 (proc-macro) (*)
+├── anchor-syn v0.31.1 (*)
+├── anchor-syn v0.32.1 (*)
+├── solana-sdk-macro v2.2.1 (proc-macro)
+│   ├── solana-clock v2.2.2 (*)
+│   ├── solana-epoch-rewards v2.2.1 (*)
+│   ├── solana-epoch-schedule v2.2.1 (*)
+│   ├── solana-last-restart-slot v2.2.1 (*)
+│   ├── solana-program v2.3.0 (*)
+│   ├── solana-rent v2.2.1 (*)
+│   └── solana-sysvar v2.3.0 (*)
+└── solana-sdk-macro v3.0.0 (proc-macro)
+    ├── solana-clock v3.0.0 (*)
+    ├── solana-epoch-rewards v3.0.0 (*)
+    ├── solana-epoch-schedule v3.0.0 (*)
+    ├── solana-last-restart-slot v3.0.0 (*)
+    ├── solana-rent v3.0.0 (*)
+    └── solana-sysvar v3.0.0 (*)
+
+crypto-common v0.1.6
+├── aead v0.5.2
+│   └── aes-gcm-siv v0.11.1
+│       └── solana-zk-sdk v2.3.13 (*)
+├── cipher v0.4.4
+│   ├── aes v0.8.4
+│   │   └── aes-gcm-siv v0.11.1 (*)
+│   ├── aes-gcm-siv v0.11.1 (*)
+│   └── ctr v0.9.2
+│       └── aes-gcm-siv v0.11.1 (*)
+├── digest v0.10.7 (*)
+└── universal-hash v0.5.1
+    └── polyval v0.6.2
+        └── aes-gcm-siv v0.11.1 (*)
+
+crypto-common v0.1.6
+└── digest v0.10.7 (*)
+
+digest v0.9.0
+└── libsecp256k1-core v0.2.2
+    ├── libsecp256k1-gen-ecmult v0.2.1
+    │   [build-dependencies]
+    │   └── libsecp256k1 v0.6.0 (*)
+    └── libsecp256k1-gen-genmult v0.2.1
+        [build-dependencies]
+        └── libsecp256k1 v0.6.0 (*)
+
+digest v0.9.0
+├── libsecp256k1 v0.6.0 (*)
+├── libsecp256k1-core v0.2.2
+│   └── libsecp256k1 v0.6.0 (*)
+└── sha2 v0.9.9 (*)
+
+digest v0.10.7 (*)
+
+digest v0.10.7 (*)
+
+generic-array v0.14.9
+├── block-buffer v0.10.4 (*)
+├── crypto-common v0.1.6 (*)
+└── digest v0.9.0 (*)
+
+generic-array v0.14.9
+├── aead v0.5.2 (*)
+├── block-buffer v0.9.0 (*)
+├── crypto-bigint v0.5.5
+│   └── elliptic-curve v0.13.8 (*)
+├── crypto-common v0.1.6 (*)
+├── digest v0.9.0 (*)
+├── elliptic-curve v0.13.8 (*)
+├── inout v0.1.4
+│   └── cipher v0.4.4 (*)
+└── sec1 v0.7.3
+    └── elliptic-curve v0.13.8 (*)
+
+getrandom v0.1.16
+├── rand v0.7.3
+│   └── libsecp256k1 v0.6.0 (*)
+└── rand_core v0.5.1
+    ├── rand v0.7.3 (*)
+    └── rand_chacha v0.2.2
+        └── rand v0.7.3 (*)
+
+getrandom v0.2.16
+└── rand_core v0.6.4
+    ├── crypto-bigint v0.5.5 (*)
+    ├── crypto-common v0.1.6 (*)
+    ├── curve25519-dalek v4.1.3 (*)
+    ├── elliptic-curve v0.13.8 (*)
+    ├── ff v0.13.1
+    │   ├── elliptic-curve v0.13.8 (*)
+    │   └── group v0.13.0
+    │       └── elliptic-curve v0.13.8 (*)
+    ├── group v0.13.0 (*)
+    ├── merlin v3.0.0
+    │   └── solana-zk-sdk v2.3.13 (*)
+    ├── rand v0.8.5
+    │   ├── solana-program v2.3.0 (*)
+    │   └── solana-zk-sdk v2.3.13 (*)
+    ├── rand_chacha v0.3.1
+    │   └── rand v0.8.5 (*)
+    └── signature v2.2.0 (*)
+
+hashbrown v0.13.2
+└── borsh v0.10.3 (*)
+
+hashbrown v0.16.0
+└── indexmap v2.12.0
+    └── toml_edit v0.23.7
+        └── proc-macro-crate v3.4.0
+            ├── borsh-derive v1.5.7 (proc-macro) (*)
+            └── num_enum_derive v0.7.5 (proc-macro)
+                └── num_enum v0.7.5
+                    ├── spl-token v8.0.0 (*)
+                    └── spl-token-2022 v8.0.1 (*)
+
+libsecp256k1-core v0.2.2 (*)
+
+libsecp256k1-core v0.2.2 (*)
+
+num-derive v0.3.3 (proc-macro)
+└── mpl-token-metadata v5.1.1 (*)
+
+num-derive v0.4.2 (proc-macro)
+├── solana-program v2.3.0 (*)
+├── solana-vote-interface v2.2.6 (*)
+├── solana-zk-sdk v2.3.13 (*)
+├── spl-associated-token-account v7.0.0 (*)
+├── spl-pod v0.5.1 (*)
+├── spl-program-error v0.7.0 (*)
+├── spl-tlv-account-resolution v0.10.0 (*)
+├── spl-token v8.0.0 (*)
+├── spl-token-2022 v8.0.1 (*)
+├── spl-token-group-interface v0.6.0 (*)
+├── spl-token-metadata-interface v0.7.0 (*)
+├── spl-transfer-hook-interface v0.10.0 (*)
+└── spl-type-length-value v0.8.0 (*)
+
+once_cell v1.21.3
+└── borsh-derive v1.5.7 (proc-macro) (*)
+
+once_cell v1.21.3
+├── ahash v0.8.12
+│   └── hashbrown v0.13.2 (*)
+└── k256 v0.13.4 (*)
+
+proc-macro-crate v0.1.5
+└── borsh-derive v0.10.3 (proc-macro) (*)
+
+proc-macro-crate v3.4.0 (*)
+
+rand v0.7.3 (*)
+
+rand v0.8.5 (*)
+
+rand_chacha v0.2.2 (*)
+
+rand_chacha v0.3.1 (*)
+
+rand_core v0.5.1 (*)
+
+rand_core v0.6.4 (*)
+
+sha2 v0.9.9 (*)
+
+sha2 v0.10.9 (*)
+
+solana-account-info v2.3.0 (*)
+
+solana-account-info v3.0.0 (*)
+
+solana-address-lookup-table-interface v2.2.2 (*)
+
+solana-address-lookup-table-interface v3.0.0 (*)
+
+solana-atomic-u64 v2.2.1
+├── solana-hash v2.3.0 (*)
+├── solana-program v2.3.0 (*)
+└── solana-pubkey v2.4.0 (*)
+
+solana-atomic-u64 v3.0.0
+├── solana-address v1.0.0 (*)
+└── solana-hash v3.0.0 (*)
+
+solana-big-mod-exp v2.2.1
+└── solana-program v2.3.0 (*)
+
+solana-big-mod-exp v3.0.0
+└── solana-program v3.0.0 (*)
+
+solana-blake3-hasher v2.2.1 (*)
+
+solana-blake3-hasher v3.0.0 (*)
+
+solana-borsh v2.2.1 (*)
+
+solana-borsh v3.0.0 (*)
+
+solana-clock v2.2.2 (*)
+
+solana-clock v3.0.0 (*)
+
+solana-cpi v2.2.1 (*)
+
+solana-cpi v3.0.0 (*)
+
+solana-define-syscall v2.3.0
+├── anchor-lang v0.32.1 (*)
+└── solana-invoke v0.4.0 (*)
+
+solana-define-syscall v3.0.0
+└── solana-program-entrypoint v3.1.0 (*)
+
+solana-epoch-rewards v2.2.1 (*)
+
+solana-epoch-rewards v3.0.0 (*)
+
+solana-epoch-schedule v2.2.1 (*)
+
+solana-epoch-schedule v3.0.0 (*)
+
+solana-example-mocks v2.2.1 (*)
+
+solana-example-mocks v3.0.0 (*)
+
+solana-fee-calculator v2.2.1
+├── solana-nonce v2.2.1 (*)
+├── solana-program v2.3.0 (*)
+└── solana-sysvar v2.3.0 (*)
+
+solana-fee-calculator v3.0.0
+├── solana-nonce v3.0.0 (*)
+├── solana-program v3.0.0 (*)
+└── solana-sysvar v3.0.0 (*)
+
+solana-hash v2.3.0 (*)
+
+solana-hash v3.0.0 (*)
+
+solana-instruction v2.3.0 (*)
+
+solana-instruction v3.0.0 (*)
+
+solana-instructions-sysvar v2.2.2 (*)
+
+solana-instructions-sysvar v3.0.0 (*)
+
+solana-keccak-hasher v2.2.1 (*)
+
+solana-keccak-hasher v3.0.0 (*)
+
+solana-last-restart-slot v2.2.1 (*)
+
+solana-last-restart-slot v3.0.0 (*)
+
+solana-loader-v3-interface v3.0.0 (*)
+
+solana-loader-v3-interface v5.0.0 (*)
+
+solana-message v2.4.0 (*)
+
+solana-message v3.0.1 (*)
+
+solana-msg v2.2.1
+├── anchor-lang v0.32.1 (*)
+├── solana-program v2.3.0 (*)
+├── solana-program-entrypoint v2.3.0 (*)
+├── solana-program-error v2.2.2 (*)
+├── spl-elgamal-registry v0.2.0 (*)
+├── spl-memo v6.0.0 (*)
+├── spl-pod v0.5.1 (*)
+├── spl-program-error v0.7.0 (*)
+├── spl-tlv-account-resolution v0.10.0 (*)
+├── spl-token v8.0.0 (*)
+├── spl-token-2022 v8.0.1 (*)
+├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+├── spl-token-group-interface v0.6.0 (*)
+├── spl-token-metadata-interface v0.7.0 (*)
+├── spl-transfer-hook-interface v0.10.0 (*)
+└── spl-type-length-value v0.8.0 (*)
+
+solana-msg v3.0.0
+├── solana-program v3.0.0 (*)
+├── solana-program-entrypoint v3.1.0 (*)
+└── solana-system-interface v2.0.0 (*)
+
+solana-native-token v2.3.0
+├── solana-program v2.3.0 (*)
+└── spl-token-2022 v8.0.1 (*)
+
+solana-native-token v3.0.0
+└── solana-program v3.0.0 (*)
+
+solana-nonce v2.2.1 (*)
+
+solana-nonce v3.0.0 (*)
+
+solana-program v2.3.0 (*)
+
+solana-program v3.0.0 (*)
+
+solana-program-entrypoint v2.3.0 (*)
+
+solana-program-entrypoint v3.1.0 (*)
+
+solana-program-error v2.2.2 (*)
+
+solana-program-error v3.0.0 (*)
+
+solana-program-memory v2.3.1
+├── anchor-lang v0.32.1 (*)
+├── solana-account-info v2.3.0 (*)
+├── solana-program v2.3.0 (*)
+├── solana-sysvar v2.3.0 (*)
+├── spl-token v8.0.0 (*)
+└── spl-token-2022 v8.0.1 (*)
+
+solana-program-memory v3.0.0
+├── solana-account-info v3.0.0 (*)
+├── solana-program v3.0.0 (*)
+└── solana-sysvar v3.0.0 (*)
+
+solana-program-option v2.2.1
+├── anchor-lang v0.32.1 (*)
+├── solana-program v2.3.0 (*)
+├── spl-pod v0.5.1 (*)
+├── spl-token v8.0.0 (*)
+└── spl-token-2022 v8.0.1 (*)
+
+solana-program-option v3.0.0
+└── solana-program v3.0.0 (*)
+
+solana-program-pack v2.2.1 (*)
+
+solana-program-pack v3.0.0 (*)
+
+solana-pubkey v2.4.0 (*)
+
+solana-pubkey v3.0.0 (*)
+
+solana-rent v2.2.1 (*)
+
+solana-rent v3.0.0 (*)
+
+solana-sanitize v2.2.1
+├── solana-blake3-hasher v2.2.1 (*)
+├── solana-hash v2.3.0 (*)
+├── solana-instructions-sysvar v2.2.2 (*)
+├── solana-keccak-hasher v2.2.1 (*)
+├── solana-message v2.4.0 (*)
+├── solana-program v2.3.0 (*)
+├── solana-pubkey v2.4.0 (*)
+├── solana-serialize-utils v2.2.1 (*)
+├── solana-signature v2.3.0
+│   ├── solana-signer v2.2.1 (*)
+│   └── solana-zk-sdk v2.3.13 (*)
+├── solana-sysvar v2.3.0 (*)
+└── solana-transaction-error v2.2.1 (*)
+
+solana-sanitize v3.0.1
+├── solana-address v1.0.0 (*)
+├── solana-hash v3.0.0 (*)
+├── solana-instructions-sysvar v3.0.0 (*)
+├── solana-message v3.0.1 (*)
+├── solana-serialize-utils v3.1.0 (*)
+└── solana-transaction-error v3.0.0 (*)
+
+solana-sdk-ids v2.2.1 (*)
+
+solana-sdk-ids v3.0.0 (*)
+
+solana-sdk-macro v2.2.1 (proc-macro) (*)
+
+solana-sdk-macro v3.0.0 (proc-macro) (*)
+
+solana-secp256k1-recover v2.2.1 (*)
+
+solana-secp256k1-recover v3.0.0 (*)
+
+solana-serde-varint v2.2.2
+├── solana-program v2.3.0 (*)
+└── solana-vote-interface v2.2.6 (*)
+
+solana-serde-varint v3.0.0
+└── solana-program v3.0.0 (*)
+
+solana-serialize-utils v2.2.1 (*)
+
+solana-serialize-utils v3.1.0 (*)
+
+solana-sha256-hasher v2.3.0 (*)
+
+solana-sha256-hasher v3.0.0 (*)
+
+solana-short-vec v2.2.1
+├── solana-message v2.4.0 (*)
+├── solana-program v2.3.0 (*)
+└── solana-vote-interface v2.2.6 (*)
+
+solana-short-vec v3.0.0
+├── solana-message v3.0.1 (*)
+└── solana-program v3.0.0 (*)
+
+solana-slot-hashes v2.2.1 (*)
+
+solana-slot-hashes v3.0.0 (*)
+
+solana-slot-history v2.2.1 (*)
+
+solana-slot-history v3.0.0 (*)
+
+solana-stable-layout v2.2.1 (*)
+
+solana-stable-layout v3.0.0 (*)
+
+solana-system-interface v1.0.0 (*)
+
+solana-system-interface v2.0.0 (*)
+
+solana-sysvar v2.3.0 (*)
+
+solana-sysvar v3.0.0 (*)
+
+solana-sysvar-id v2.2.1 (*)
+
+solana-sysvar-id v3.0.0 (*)
+
+solana-transaction-error v2.2.1 (*)
+
+solana-transaction-error v3.0.0 (*)
+
+subtle v2.6.1
+├── aes-gcm-siv v0.11.1 (*)
+├── crypto-bigint v0.5.5 (*)
+├── curve25519-dalek v4.1.3 (*)
+├── digest v0.10.7 (*)
+├── elliptic-curve v0.13.8 (*)
+├── ff v0.13.1 (*)
+├── group v0.13.0 (*)
+├── libsecp256k1-core v0.2.2 (*)
+├── rfc6979 v0.4.0 (*)
+├── sec1 v0.7.3 (*)
+├── solana-curve25519 v2.3.13 (*)
+├── solana-zk-sdk v2.3.13 (*)
+└── universal-hash v0.5.1 (*)
+
+subtle v2.6.1
+└── libsecp256k1-core v0.2.2 (*)
+
+syn v1.0.109
+├── anchor-attribute-access-control v0.31.1 (proc-macro) (*)
+├── anchor-attribute-access-control v0.32.1 (proc-macro) (*)
+├── anchor-attribute-account v0.31.1 (proc-macro) (*)
+├── anchor-attribute-account v0.32.1 (proc-macro) (*)
+├── anchor-attribute-constant v0.31.1 (proc-macro) (*)
+├── anchor-attribute-constant v0.32.1 (proc-macro) (*)
+├── anchor-attribute-error v0.31.1 (proc-macro) (*)
+├── anchor-attribute-error v0.32.1 (proc-macro) (*)
+├── anchor-attribute-event v0.31.1 (proc-macro) (*)
+├── anchor-attribute-event v0.32.1 (proc-macro) (*)
+├── anchor-attribute-program v0.31.1 (proc-macro) (*)
+├── anchor-attribute-program v0.32.1 (proc-macro) (*)
+├── anchor-derive-accounts v0.31.1 (proc-macro) (*)
+├── anchor-derive-accounts v0.32.1 (proc-macro) (*)
+├── anchor-derive-serde v0.31.1 (proc-macro) (*)
+├── anchor-derive-serde v0.32.1 (proc-macro) (*)
+├── anchor-derive-space v0.31.1 (proc-macro) (*)
+├── anchor-derive-space v0.32.1 (proc-macro) (*)
+├── anchor-syn v0.31.1 (*)
+├── anchor-syn v0.32.1 (*)
+├── borsh-derive v0.10.3 (proc-macro) (*)
+├── borsh-derive-internal v0.10.3
+│   ├── anchor-derive-serde v0.31.1 (proc-macro) (*)
+│   ├── anchor-derive-serde v0.32.1 (proc-macro) (*)
+│   └── borsh-derive v0.10.3 (proc-macro) (*)
+├── borsh-schema-derive-internal v0.10.3
+│   └── borsh-derive v0.10.3 (proc-macro) (*)
+├── ephemeral-rollups-sdk-attribute-commit v0.2.5 (proc-macro) (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/commit-attribute)
+│   └── ephemeral-rollups-sdk v0.2.5 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk) (*)
+├── ephemeral-rollups-sdk-attribute-delegate v0.2.5 (proc-macro) (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/delegate)
+│   └── ephemeral-rollups-sdk v0.2.5 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk) (*)
+├── ephemeral-rollups-sdk-attribute-ephemeral v0.2.5 (proc-macro) (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/ephemeral)
+│   └── ephemeral-rollups-sdk v0.2.5 (/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk) (*)
+└── num-derive v0.3.3 (proc-macro) (*)
+
+syn v2.0.108
+├── borsh-derive v1.5.7 (proc-macro) (*)
+├── bytemuck_derive v1.10.2 (proc-macro)
+│   ├── bytemuck v1.24.0
+│   │   ├── anchor-lang v0.31.1 (*)
+│   │   ├── anchor-lang v0.32.1 (*)
+│   │   ├── pythnet-sdk v2.3.1 (*)
+│   │   ├── solana-address v1.0.0 (*)
+│   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   ├── solana-curve25519 v2.3.13 (*)
+│   │   ├── solana-hash v2.3.0 (*)
+│   │   ├── solana-hash v3.0.0 (*)
+│   │   ├── solana-program v2.3.0 (*)
+│   │   ├── solana-pubkey v2.4.0 (*)
+│   │   ├── solana-sysvar v2.3.0 (*)
+│   │   ├── solana-sysvar v3.0.0 (*)
+│   │   ├── solana-zk-sdk v2.3.13 (*)
+│   │   ├── spl-discriminator v0.4.1 (*)
+│   │   ├── spl-elgamal-registry v0.2.0 (*)
+│   │   ├── spl-pod v0.5.1 (*)
+│   │   ├── spl-tlv-account-resolution v0.10.0 (*)
+│   │   ├── spl-token v8.0.0 (*)
+│   │   ├── spl-token-2022 v8.0.1 (*)
+│   │   ├── spl-token-confidential-transfer-ciphertext-arithmetic v0.3.1 (*)
+│   │   ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│   │   ├── spl-token-group-interface v0.6.0 (*)
+│   │   ├── spl-transfer-hook-interface v0.10.0 (*)
+│   │   └── spl-type-length-value v0.8.0 (*)
+│   ├── solana-address v1.0.0 (*)
+│   ├── solana-curve25519 v2.3.13 (*)
+│   ├── solana-hash v2.3.0 (*)
+│   ├── solana-hash v3.0.0 (*)
+│   ├── solana-pubkey v2.4.0 (*)
+│   ├── solana-sysvar v2.3.0 (*)
+│   ├── solana-sysvar v3.0.0 (*)
+│   ├── solana-zk-sdk v2.3.13 (*)
+│   └── spl-pod v0.5.1 (*)
+├── curve25519-dalek-derive v0.1.1 (proc-macro)
+│   └── curve25519-dalek v4.1.3 (*)
+├── num-derive v0.4.2 (proc-macro) (*)
+├── num_enum_derive v0.7.5 (proc-macro) (*)
+├── serde_derive v1.0.228 (proc-macro)
+│   ├── serde v1.0.228
+│   │   ├── anchor-lang-idl v0.1.2 (*)
+│   │   ├── anchor-lang-idl-spec v0.1.0
+│   │   │   └── anchor-lang-idl v0.1.2 (*)
+│   │   ├── anchor-syn v0.31.1 (*)
+│   │   ├── anchor-syn v0.32.1 (*)
+│   │   ├── bincode v1.3.3
+│   │   │   ├── anchor-lang v0.31.1 (*)
+│   │   │   ├── anchor-lang v0.32.1 (*)
+│   │   │   ├── pythnet-sdk v2.3.1 (*)
+│   │   │   ├── solana-account-info v2.3.0 (*)
+│   │   │   ├── solana-account-info v3.0.0 (*)
+│   │   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   │   ├── solana-bincode v2.2.1 (*)
+│   │   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   │   ├── solana-instruction v2.3.0 (*)
+│   │   │   ├── solana-instruction v3.0.0 (*)
+│   │   │   ├── solana-message v2.4.0 (*)
+│   │   │   ├── solana-program v2.3.0 (*)
+│   │   │   ├── solana-sysvar v2.3.0 (*)
+│   │   │   ├── solana-sysvar v3.0.0 (*)
+│   │   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   │   └── solana-zk-sdk v2.3.13 (*)
+│   │   ├── bv v0.11.1
+│   │   │   ├── solana-slot-history v2.2.1 (*)
+│   │   │   └── solana-slot-history v3.0.0 (*)
+│   │   ├── curve25519-dalek v4.1.3 (*)
+│   │   ├── hex v0.4.3
+│   │   │   ├── pyth-solana-receiver-sdk v1.0.1 (*)
+│   │   │   └── pythnet-sdk v2.3.1 (*)
+│   │   ├── libsecp256k1 v0.6.0 (*)
+│   │   ├── pythnet-sdk v2.3.1 (*)
+│   │   ├── solana-account-info v2.3.0 (*)
+│   │   ├── solana-account-info v3.0.0 (*)
+│   │   ├── solana-address v1.0.0 (*)
+│   │   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   │   ├── solana-bincode v2.2.1 (*)
+│   │   ├── solana-clock v2.2.2 (*)
+│   │   ├── solana-clock v3.0.0 (*)
+│   │   ├── solana-epoch-rewards v2.2.1 (*)
+│   │   ├── solana-epoch-rewards v3.0.0 (*)
+│   │   ├── solana-epoch-schedule v2.2.1 (*)
+│   │   ├── solana-epoch-schedule v3.0.0 (*)
+│   │   ├── solana-example-mocks v2.2.1 (*)
+│   │   ├── solana-example-mocks v3.0.0 (*)
+│   │   ├── solana-feature-gate-interface v2.2.2 (*)
+│   │   ├── solana-fee-calculator v2.2.1 (*)
+│   │   ├── solana-fee-calculator v3.0.0 (*)
+│   │   ├── solana-hash v2.3.0 (*)
+│   │   ├── solana-hash v3.0.0 (*)
+│   │   ├── solana-instruction v2.3.0 (*)
+│   │   ├── solana-instruction v3.0.0 (*)
+│   │   ├── solana-last-restart-slot v2.2.1 (*)
+│   │   ├── solana-last-restart-slot v3.0.0 (*)
+│   │   ├── solana-loader-v2-interface v2.2.1 (*)
+│   │   ├── solana-loader-v3-interface v3.0.0 (*)
+│   │   ├── solana-loader-v3-interface v5.0.0 (*)
+│   │   ├── solana-loader-v4-interface v2.2.1 (*)
+│   │   ├── solana-message v2.4.0 (*)
+│   │   ├── solana-message v3.0.1 (*)
+│   │   ├── solana-nonce v2.2.1 (*)
+│   │   ├── solana-program v2.3.0 (*)
+│   │   ├── solana-program-error v2.2.2 (*)
+│   │   ├── solana-program-error v3.0.0 (*)
+│   │   ├── solana-pubkey v2.4.0 (*)
+│   │   ├── solana-rent v2.2.1 (*)
+│   │   ├── solana-rent v3.0.0 (*)
+│   │   ├── solana-serde-varint v2.2.2 (*)
+│   │   ├── solana-serde-varint v3.0.0 (*)
+│   │   ├── solana-short-vec v2.2.1 (*)
+│   │   ├── solana-short-vec v3.0.0 (*)
+│   │   ├── solana-slot-hashes v2.2.1 (*)
+│   │   ├── solana-slot-hashes v3.0.0 (*)
+│   │   ├── solana-slot-history v2.2.1 (*)
+│   │   ├── solana-slot-history v3.0.0 (*)
+│   │   ├── solana-stake-interface v1.2.1 (*)
+│   │   ├── solana-system-interface v1.0.0 (*)
+│   │   ├── solana-sysvar v2.3.0 (*)
+│   │   ├── solana-sysvar v3.0.0 (*)
+│   │   ├── solana-vote-interface v2.2.6 (*)
+│   │   ├── solana-zk-sdk v2.3.13 (*)
+│   │   └── toml v0.5.11
+│   │       └── proc-macro-crate v0.1.5 (*)
+│   ├── solana-address v1.0.0 (*)
+│   ├── solana-address-lookup-table-interface v2.2.2 (*)
+│   ├── solana-clock v2.2.2 (*)
+│   ├── solana-clock v3.0.0 (*)
+│   ├── solana-epoch-rewards v2.2.1 (*)
+│   ├── solana-epoch-rewards v3.0.0 (*)
+│   ├── solana-epoch-schedule v2.2.1 (*)
+│   ├── solana-epoch-schedule v3.0.0 (*)
+│   ├── solana-example-mocks v2.2.1 (*)
+│   ├── solana-example-mocks v3.0.0 (*)
+│   ├── solana-feature-gate-interface v2.2.2 (*)
+│   ├── solana-fee-calculator v2.2.1 (*)
+│   ├── solana-fee-calculator v3.0.0 (*)
+│   ├── solana-hash v2.3.0 (*)
+│   ├── solana-hash v3.0.0 (*)
+│   ├── solana-instruction v2.3.0 (*)
+│   ├── solana-instruction v3.0.0 (*)
+│   ├── solana-last-restart-slot v2.2.1 (*)
+│   ├── solana-last-restart-slot v3.0.0 (*)
+│   ├── solana-loader-v2-interface v2.2.1 (*)
+│   ├── solana-loader-v3-interface v3.0.0 (*)
+│   ├── solana-loader-v3-interface v5.0.0 (*)
+│   ├── solana-loader-v4-interface v2.2.1 (*)
+│   ├── solana-message v2.4.0 (*)
+│   ├── solana-message v3.0.1 (*)
+│   ├── solana-nonce v2.2.1 (*)
+│   ├── solana-program v2.3.0 (*)
+│   ├── solana-program-error v2.2.2 (*)
+│   ├── solana-program-error v3.0.0 (*)
+│   ├── solana-pubkey v2.4.0 (*)
+│   ├── solana-rent v2.2.1 (*)
+│   ├── solana-rent v3.0.0 (*)
+│   ├── solana-slot-hashes v2.2.1 (*)
+│   ├── solana-slot-hashes v3.0.0 (*)
+│   ├── solana-slot-history v2.2.1 (*)
+│   ├── solana-slot-history v3.0.0 (*)
+│   ├── solana-stake-interface v1.2.1 (*)
+│   ├── solana-system-interface v1.0.0 (*)
+│   ├── solana-sysvar v2.3.0 (*)
+│   ├── solana-sysvar v3.0.0 (*)
+│   ├── solana-vote-interface v2.2.6 (*)
+│   └── solana-zk-sdk v2.3.13 (*)
+├── solana-sdk-macro v2.2.1 (proc-macro) (*)
+├── solana-sdk-macro v3.0.0 (proc-macro) (*)
+├── spl-discriminator-derive v0.2.0 (proc-macro) (*)
+├── spl-discriminator-syn v0.2.1 (*)
+├── spl-program-error-derive v0.5.0 (proc-macro) (*)
+├── thiserror-impl v1.0.69 (proc-macro)
+│   └── thiserror v1.0.69
+│       ├── anchor-lang v0.31.1 (*)
+│       ├── anchor-lang v0.32.1 (*)
+│       ├── anchor-syn v0.31.1 (*)
+│       ├── anchor-syn v0.32.1 (*)
+│       ├── mpl-token-metadata v5.1.1 (*)
+│       ├── pythnet-sdk v2.3.1 (*)
+│       └── spl-discriminator-syn v0.2.1 (*)
+├── thiserror-impl v2.0.17 (proc-macro)
+│   └── thiserror v2.0.17
+│       ├── solana-curve25519 v2.3.13 (*)
+│       ├── solana-example-mocks v2.2.1 (*)
+│       ├── solana-example-mocks v3.0.0 (*)
+│       ├── solana-program v2.3.0 (*)
+│       ├── solana-secp256k1-recover v2.2.1 (*)
+│       ├── solana-secp256k1-recover v3.0.0 (*)
+│       ├── solana-zk-sdk v2.3.13 (*)
+│       ├── spl-associated-token-account v7.0.0 (*)
+│       ├── spl-pod v0.5.1 (*)
+│       ├── spl-program-error v0.7.0 (*)
+│       ├── spl-tlv-account-resolution v0.10.0 (*)
+│       ├── spl-token v8.0.0 (*)
+│       ├── spl-token-2022 v8.0.1 (*)
+│       ├── spl-token-confidential-transfer-proof-extraction v0.3.0 (*)
+│       ├── spl-token-confidential-transfer-proof-generation v0.4.1 (*)
+│       ├── spl-token-group-interface v0.6.0 (*)
+│       ├── spl-token-metadata-interface v0.7.0 (*)
+│       ├── spl-transfer-hook-interface v0.10.0 (*)
+│       └── spl-type-length-value v0.8.0 (*)
+└── zeroize_derive v1.4.2 (proc-macro)
+    └── zeroize v1.8.2
+        ├── aes-gcm-siv v0.11.1 (*)
+        ├── crypto-bigint v0.5.5 (*)
+        ├── curve25519-dalek v4.1.3 (*)
+        ├── der v0.7.10
+        │   ├── ecdsa v0.16.9 (*)
+        │   ├── pkcs8 v0.10.2
+        │   │   └── elliptic-curve v0.13.8 (*)
+        │   ├── sec1 v0.7.3 (*)
+        │   └── spki v0.7.3
+        │       ├── ecdsa v0.16.9 (*)
+        │       └── pkcs8 v0.10.2 (*)
+        ├── elliptic-curve v0.13.8 (*)
+        ├── generic-array v0.14.9 (*)
+        ├── merlin v3.0.0 (*)
+        ├── sec1 v0.7.3 (*)
+        └── solana-zk-sdk v2.3.13 (*)
+
+thiserror v1.0.69 (*)
+
+thiserror v2.0.17 (*)
+
+thiserror-impl v1.0.69 (proc-macro) (*)
+
+thiserror-impl v2.0.17 (proc-macro) (*)

@@ -1,6 +1,7 @@
 [toolchain]
 package_manager = "yarn"
-
+anchor_version = "0.31.1"
+solana_version = "2.3.0"  # Matches v0.32.1; install via `solana-install init 2.3.0`
 [features]
 resolution = true
 skip-lint = false

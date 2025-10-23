@@ -1,134 +1,159 @@
 use anchor_lang::prelude::*;
-use crate::competition::{Competition, CompetitionError};
-use anchor_spl::token::{Mint, Token};
-use mpl_token_metadata::{
-    instruction::{create_metadata_accounts_v3},
-    state::Creator,
-};
-use anchor_lang::solana_program::program::invoke_signed;
-use anchor_lang::solana_program::system_program::ID as SYSTEM_PROGRAM_ID;
-use anchor_lang::solana_program::sysvar::rent::Rent;
+use crate::competition::*;
+use crate::events::WinnerNftMinted;
+use anchor_spl::token::{Mint, Token, TokenAccount};
+use mpl_token_metadata::instructions::{CreateMetadataAccountV3, CreateMetadataAccountV3InstructionArgs};
+use mpl_token_metadata::types::{Creator, DataV2};
 
 #[derive(Accounts)]
 #[instruction(metadata_uri: String)]
 pub struct MintWinnerNft<'info> {
-    // The Competition account must be a PDA to sign for the NFT metadata creation
-    #[account(mut, has_one = authority)]
+    #[account(
+        mut,
+        has_one = authority,
+        has_one = winner,
+        constraint = competition.phase == CompetitionPhase::Settled @ CompetitionError::NotActive
+    )]
     pub competition: Account<'info, Competition>,
-    
-    // Admin Authority who signs the transaction to initialize the minting process
+
     #[account(mut)]
-    pub authority: Signer<'info>, 
-    
-    // Winner account (must be the actual winner based on the committed state)
-    /// CHECK: We check if this account is the rightful winner against the leaderboard.
-    pub winner: AccountInfo<'info>, 
-    
-    // Accounts for NFT Minting (must be pre-created by the client)
-    #[account(mut)]
+    pub authority: Signer<'info>,
+
+    #[account(
+        mut,
+        has_one = competition,
+        has_one = user,
+        constraint = winner_position.user == competition.winner @ CompetitionError::Unauthorized,
+        seeds = [b"position", competition.key().as_ref(), winner_position.user.as_ref()],
+        bump = winner_position.bump
+    )]
+    pub winner_position: Account<'info, Position>,
+
+    /// CHECK: Verified by constraint
+    #[account(address = winner_position.user @ CompetitionError::Unauthorized)]
+    pub winner_wallet: UncheckedAccount<'info>,
+
+    #[account(
+        init,
+        payer = authority,
+        mint::decimals = 0,
+        mint::authority = competition,
+        seeds = [b"nft_mint", competition.key().as_ref(), winner_position.user.as_ref()],
+        bump
+    )]
     pub nft_mint: Account<'info, Mint>,
-    #[account(mut)]
-    pub nft_account: Account<'info, anchor_spl::token::TokenAccount>,
-    
-    // Metaplex Metadata PDA (must be the correct PDA derived from the NFT mint)
-    #[account(mut)]
-    /// CHECK: The metadata PDA address is verified implicitly by Metaplex CPI
+
+    #[account(
+        init,
+        payer = authority,
+        token::mint = nft_mint,
+        token::authority = winner_wallet
+    )]
+    pub nft_account: Account<'info, TokenAccount>,
+
+    #[account(
+        mut,
+        seeds = [
+            b"metadata",
+            mpl_token_metadata::ID.to_bytes().as_ref(),
+            nft_mint.key().as_ref()
+        ],
+        bump,
+        seeds::program = token_metadata_program
+    )]
+    /// CHECK: Metaplex metadata PDA
     pub metadata_account: UncheckedAccount<'info>,
-    
-    // Programs
+
     pub token_program: Program<'info, Token>,
     pub system_program: Program<'info, System>,
-    #[account(address = mpl_token_metadata::id())]
-    /// CHECK: Address checked against Metaplex ID
+    #[account(address = mpl_token_metadata::ID)]
     pub token_metadata_program: UncheckedAccount<'info>,
     pub rent: Sysvar<'info, Rent>,
+    pub clock: Sysvar<'info, Clock>,
 }
 
-pub fn handler(
-    ctx: Context<MintWinnerNft>,
-    metadata_uri: String,
-) -> Result<()> {
-    let competition = &ctx.accounts.competition;
-    
-    // 1. Pre-Check: Ensure the competition session is finalized.
-    require!(!competition.is_active, CompetitionError::NotActive);
+pub fn handler(ctx: Context<MintWinnerNft>, metadata_uri: String) -> Result<()> {
+    let comp = &ctx.accounts.competition;
+    let pos = &ctx.accounts.winner_position;
 
-    // 2. Winner Verification: Read the finalized leaderboard state.
-    let winner_key = ctx.accounts.winner.key();
-    let top_position = competition.leaderboard.first().ok_or(CompetitionError::NoWinner)?;
-    
-    // This check uses the data finalized on L1 after the MagicBlock State Commitment.
-    require!(top_position.user == winner_key, CompetitionError::Unauthorized);
+    let signer_seeds: &[&[&[u8]]] = &[&[
+        b"competition",
+        comp.authority.as_ref(),
+        &[comp.bump]
+    ]];
 
-    // --- CPI Signer Seeds ---
-    let (competition_key, competition_bump) = Pubkey::find_program_address(
-        &[b"competition", ctx.accounts.authority.key().as_ref()],
-        ctx.program_id,
-    );
-    let signer_seeds: &[&[&[u8]]] = &[
-        &[
-            b"competition",
-            ctx.accounts.authority.key().as_ref(),
-            &[competition_bump],
-        ],
-    ];
-
-    // 3. Mint NFT (CPI to SPL Token Program)
-    // The Competition PDA acts as the Mint Authority, so we use invoke_signed.
+    // Mint the NFT
     anchor_spl::token::mint_to(
         CpiContext::new_with_signer(
             ctx.accounts.token_program.to_account_info(),
             anchor_spl::token::MintTo {
                 mint: ctx.accounts.nft_mint.to_account_info(),
                 to: ctx.accounts.nft_account.to_account_info(),
-                // The Competition PDA is the authority
-                authority: ctx.accounts.competition.to_account_info(), 
+                authority: ctx.accounts.competition.to_account_info(),
             },
             signer_seeds,
         ),
-        1, // Mint exactly 1 NFT
+        1,
     )?;
-    
-    // 4. Create Metadata (CPI to Metaplex Token Metadata Program)
+
+    // Create Metaplex metadata
     let creator = Creator {
-        address: competition_key, // The Competition PDA is the creator
+        address: comp.key(),
         verified: true,
         share: 100,
     };
-    
-    let metadata_instruction = create_metadata_accounts_v3(
-        ctx.accounts.token_metadata_program.key(),
-        ctx.accounts.metadata_account.key(),
-        ctx.accounts.nft_mint.key(),
-        competition_key, // Mint Authority / Update Authority (Competition PDA)
-        ctx.accounts.authority.key(), // Payer (Admin)
-        competition_key, // Update Authority
-        format!("Competition Winner - {}s", competition.duration),
-        "WINNER",
-        Some(metadata_uri), // Your URI from instruction data
-        Some(vec![creator]),
-        0,
-        true, // Is mutable
-        true, // Is master edition
-        None,
-        None,
-        None,
-    );
+    let name = format!("Cypherpunk Winner: ${}", pos.profit())
+        .chars()
+        .take(32)
+        .collect::<String>();
 
-    // Invoke the Metaplex instruction, signed by the Competition PDA
-    invoke_signed(
-        &metadata_instruction,
+    let data = DataV2 {
+        name,
+        symbol: "CYPHR".to_string(),
+        uri: metadata_uri,
+        seller_fee_basis_points: 0,
+        creators: Some(vec![creator]),
+        collection: None,
+        uses: None,
+    };
+
+    let ix = CreateMetadataAccountV3 {
+        metadata: ctx.accounts.metadata_account.key(),
+        mint: ctx.accounts.nft_mint.key(),
+        mint_authority: comp.key(),
+        payer: ctx.accounts.authority.key(),
+        update_authority: (comp.key(), true),
+        system_program: ctx.accounts.system_program.key(),
+        rent: Some(ctx.accounts.rent.key()),
+    }
+    .instruction(CreateMetadataAccountV3InstructionArgs {
+        data,
+        is_mutable: true,
+        collection_details: None,
+    });
+
+    anchor_lang::solana_program::program::invoke_signed(
+        &ix,
         &[
             ctx.accounts.metadata_account.to_account_info(),
             ctx.accounts.nft_mint.to_account_info(),
-            ctx.accounts.competition.to_account_info(), // Mint Authority (PDA)
-            ctx.accounts.authority.to_account_info(), // Payer (Signer)
+            ctx.accounts.competition.to_account_info(),
+            ctx.accounts.authority.to_account_info(),
             ctx.accounts.system_program.to_account_info(),
             ctx.accounts.token_metadata_program.to_account_info(),
             ctx.accounts.rent.to_account_info(),
         ],
         signer_seeds,
     )?;
+
+    // Emit event
+    emit!(WinnerNftMinted {
+        winner: pos.user,
+        competition: comp.key(),
+        nft_mint: ctx.accounts.nft_mint.key(),
+        profit: pos.profit(),
+        timestamp: Clock::get()?.unix_timestamp,
+    });
 
     Ok(())
 }

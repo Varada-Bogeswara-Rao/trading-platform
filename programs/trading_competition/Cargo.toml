@@ -1,7 +1,6 @@
 [package]
-name = "trading-competition"
+name = "trading_competition"
 version = "0.1.0"
-description = "Competitive Web3 Trading Platform with Ephemeral Rollups"
 edition = "2021"
 
 [lib]
@@ -9,26 +8,20 @@ crate-type = ["cdylib", "lib"]
 name = "trading_competition"
 
 [features]
+default = []
 no-entrypoint = []
 no-idl = []
 no-log-ix-name = []
 cpi = ["no-entrypoint"]
-default = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
 
 [dependencies]
-# --- Core Anchor and SPL dependencies ---
-anchor-lang = "0.30.1"
-anchor-spl = "0.30.1"
-spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
-mpl-token-metadata = { version = "4.1.2", features = ["no-entrypoint"] }
-
-# --- MagicBlock SDK (delegation / ephemeral rollups) ---
-# Using main branch instead of missing tag
-magicblock-sdk = { git = "https://github.com/magicblock-labs/delegation-program.git", branch = "main", features = ["ephemeral-rollups"] }
-
-# --- Pyth Lazer SDK for price feeds ---
-pyth-lazer-sdk = { git = "https://github.com/pythnetwork/pyth-client-rs.git", features = ["cpi"] }
-
-# --- Optional fix if you face Git fetch issues ---
-# [net]
-# git-fetch-with-cli = true
+anchor-lang = { version = "=0.32.1", features = ["init-if-needed"] }
+anchor-spl = { version = "=0.32.1", features = ["token"] }
+mpl-token-metadata = "=5.1.1"
+ephemeral-rollups-sdk = { path = "/home/bunny/dev/cypherpunk-trading-comp/trading_competition/ephemeral-rollups-sdk-source/rust/sdk", features = ["anchor"] }
+base64ct = "=1.7.1"
+borsh = "=0.10.3"
+borsh-derive = "0.10.3"  # Explicit for derives
