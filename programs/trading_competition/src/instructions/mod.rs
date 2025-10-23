@@ -6,5 +6,6 @@ pub mod process_trade;
 pub mod final_commit;
 pub mod user_undelegate;
 pub mod settle_competition;
+pub mod mint_winner_nft;
 pub mod update_mock_price;
             

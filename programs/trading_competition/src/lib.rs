@@ -4,7 +4,6 @@ pub mod competition;
 pub mod events;
 pub mod instructions;
 
-use instructions::*;
 
 declare_id!("HjmkkHv5A1SPbL4zjpRJjYVj33YTTq9QYyCPkx6x6HnB");
 
@@ -66,5 +65,13 @@ pub mod trading_competition {
         metadata_uri: String,
     ) -> Result<()> {
         instructions::mint_winner_nft::handler(ctx, metadata_uri)
+    }
+
+     pub fn update_mock_price(
+        ctx: Context<UpdateMockPrice>,
+        new_price: u128,
+        new_expo: i32,
+    ) -> Result<()> {
+        instructions::update_mock_price::handler(ctx, new_price, new_expo)
     }
 }
