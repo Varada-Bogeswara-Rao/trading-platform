@@ -1,6 +1,7 @@
 use anchor_lang::prelude::*;
 
-use crate::competition::{Competition, MockPriceAccount, CompetitionError};
+use crate::competition::{Competition, MockPriceAccount, CompetitionError, CompetitionPhase};  // Fixed: Import Phase
+
 
 #[derive(Accounts)]
 pub struct UpdateMockPrice<'info> {

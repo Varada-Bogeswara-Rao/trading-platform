@@ -5,6 +5,9 @@ pub mod events;
 pub mod instructions;
 
 
+use instructions::*;
+use anchor_lang::prelude::*;
+
 declare_id!("HjmkkHv5A1SPbL4zjpRJjYVj33YTTq9QYyCPkx6x6HnB");
 
 #[program]
@@ -18,6 +21,7 @@ pub mod trading_competition {
         er_instance: Pubkey,
     ) -> Result<()> {
         instructions::init_competition::handler(ctx, duration, usdc_mint, er_instance)
+        
     }
 
     pub fn delegate_accounts(ctx: Context<DelegateAccounts>) -> Result<()> {
@@ -28,7 +32,6 @@ pub mod trading_competition {
         ctx: Context<ProcessTrade>,
         amount: u64,
         is_buy: bool,
-        price_feed_id: Pubkey,
     ) -> Result<()> {
         instructions::process_trade::handler(ctx, amount, is_buy)
     }

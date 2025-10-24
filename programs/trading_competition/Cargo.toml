@@ -25,3 +25,4 @@ ephemeral-rollups-sdk = { path = "/home/bunny/dev/cypherpunk-trading-comp/tradin
 base64ct = "=1.7.1"
 borsh = "=0.10.3"
 borsh-derive = "0.10.3"  # Explicit for derives
+hex = "0.4.3"

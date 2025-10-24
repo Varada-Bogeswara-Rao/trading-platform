@@ -1,5 +1,6 @@
 use anchor_lang::prelude::*;
 use crate::competition::*;
+use hex;
 
 #[derive(Accounts)]
 pub struct FinalCommit<'info> {
